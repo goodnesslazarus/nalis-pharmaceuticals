@@ -1,10 +1,7 @@
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${classname.variable} ${classname.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
+    <html lang="en">
+      <body>
         {children}
       </body>
     </html>
