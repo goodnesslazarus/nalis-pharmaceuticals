@@ -13,10 +13,10 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Nalis Pharmaceutical",
-  description: "Online pharmaceutical store for all your health needs.",
+  description: "Online pharmacy.",
   verification: {
-    Google: <meta name="google-site-verification" content="hkqcx7Bfmo1QvJOOXV2YVgtRl3Y7-ftYOnZVRlL8tD8"  />
-  }
+    Google: "hkqcx7Bfmo1QvJO",
+  },
 };
 
 export default function RootLayout({ children }) {
