@@ -15,7 +15,7 @@ export const metadata = {
   title: "Nalis Pharmaceutical",
   description: "Online pharmacy.",
   verification: {
-    Google: "hkqcx7Bfmo1QvJO",
+    "Google site verification": "hkqcx7Bfmo1QvJO",
   },
 };
 
