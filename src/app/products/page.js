@@ -2,8 +2,8 @@ export default function ProductsPage() {
   const products = [
     {
       name: "Nalis Paracetamol 60ml",
-      price: "₦370",
-      image: "c:\\Users\\hp\\Downloads\\Nalis Paracetamol.png",
+      price: "₦1,200",
+      image: "/products/Nalis Paracetamol.png",
       description: "Paracetamol Syrup.",
       dosage: "10ml",
       pack: "1x10x100",
@@ -11,8 +11,8 @@ export default function ProductsPage() {
     },
     {
       name: "Nalis Vitamin C",
-      price: "₦430",
-      image: "c:\\Users\\hp\\Downloads\\Vitamin C.png",
+      price: "₦1,300",
+      image: "/products/Nalis Vitamin C.png",
       description: "Vitamin C Syrup.",
       dosage: "10ml",
       pack: "1x10x60",
@@ -20,26 +20,17 @@ export default function ProductsPage() {
     },
     {
       name: "Nalistide 200ml",
-      price: "₦750",
-      image: "c:\\Users\\hp\\Downloads\\Nalistide.png",
-      description: "Nalistide Syrup.",
+      price: "₦2,300",
+      image: "/products/Nalistide 200ml.png",
+      description: "Nalistide Syrup",
       dosage: "10ml",
       pack: "1x6x24",
       category: "antibiotic",
     },
     {
-      name: "Nalistide 100ml",
-      price: "₦400",
-      image: "c:\\Users\\hp\\Downloads\\Nalistide.png",
-      description: "Nalistide Syrup.",
-      dosage: "10ml",
-      pack: "1x20",
-      category: "antibiotic",
-    },
-    { 
       name: "Lumaforce Tablet x6",
-      price: "₦480",
-      image: "c:\\Users\\hp\\Downloads\\Lumaforce.png",
+      price: "₦1,500",
+      image: "/products/Lumaforce.png",
       description: "Lumaforce Tablet.",
       dosage: "6 tablets",
         pack: "10x30",
@@ -47,8 +38,8 @@ export default function ProductsPage() {
     },
     {
       name: "Ibuprofen 100ml",
-      price: "₦465",
-      image: "c:\\Users\\hp\\Downloads\\Ibuprofen.png",
+      price: "₦1,400",
+      image: "/products/Ibuprofen.png",
       description: "Ibuprofen Syrup.",
       dosage: "10ml",
         pack: "1x10x60",
@@ -56,8 +47,8 @@ export default function ProductsPage() {
     },
     {
       name: "veelam 100ml",
-      price: "₦480",
-      image: "c:\\Users\\hp\\Downloads\\veelam.png",
+      price: "₦1,200",
+      image: "/products/veelam.png",
       description: "veelam Syrup.",
       dosage: "10ml",
       pack: "1X10X60",
@@ -65,8 +56,8 @@ export default function ProductsPage() {
     },
     {
       name: "Nalotrim 50ml", 
-      price: "₦400",
-      image: "c:\\Users\\hp\\Downloads\\Nalotrim.png",
+      price: "₦1,200",
+      image: "/products/Nalotrim.png",
       description: "Nalotrim Syrup.",
       dosage: "10ml",
       pack: "1x10x100",
@@ -74,8 +65,8 @@ export default function ProductsPage() {
     },
     {
       name: "Nalovite Tonic 200ml",
-      price: "₦900",
-      image: "c:\\Users\\hp\\Downloads\\Nalovite.png",
+      price: "₦2,500",
+      image: "/products/Nalovite Tonic.png",
       description: "Nalovite Syrup.",
       dosage: "10ml",
       pack: "1x10x24",
@@ -83,35 +74,35 @@ export default function ProductsPage() {
     },
     {
       name: "Cakafen 100ml",
-      price: "₦430",
-      image: "c:\\Users\\hp\\Downloads\\Cakafen.png",
+      price: "₦1,200",
+      image: "/products/Cakafen.png",
       description: "Cakafen Syrup.",
       dosage: "10ml",
       pack: "1x10x60",
       category: "cough lintus", 
     },
     {
-      name: "Cosine expectorant 100ml",
-      price: "₦400",
-      image: "c:\\Users\\hp\\Downloads\\Cosine.png",
-      description: "Cosine Syrup.",
+      name: "Cosine",
+      price: "₦1,200",
+      image: "/products/Cosine.png",
+      description: "Cosine syrup",
       dosage: "10ml",
       pack:   "1x10x60",
       category: "cough, cold and catarrh",
     },
     {
       name: "Prytune expectorant 100ml",
-      price: "₦380",
-      image: "c:\\Users\\hp\\Downloads\\Prytune.png",
-      description: "Prytune Syrup.",
+      price: "₦1,400",
+      image: "/products/Prytune expectorant.png",
+      description: "Prytune expectorant.",
       dosage: "10ml",
        pack: "1x20",
       category: "cough, cold and catarrh",
     },
     {
       name: "Prytune Syrup 100ml",
-      price: "₦380", 
-      image: "c:\\Users\\hp\\Downloads\\Prytune.png",
+      price: "₦1,200", 
+      image: "/products/Prytune Syrup.png",
       description: "Prytune Syrup.",
       dosage: "10ml",
       pack: "1x20",
@@ -119,8 +110,8 @@ export default function ProductsPage() {
     },
     {
       name: "Salbutamol Syrup 100ml",
-      price: "₦400",
-      image: "c:\\Users\\hp\\Downloads\\Salbutamol.png",
+      price: "₦1,500",
+      image: "/products/Salbutamol.png",
       description: "Salbutamol Syrup.",
       dosage: "10ml",
       pack: "1x10x60",
@@ -128,33 +119,25 @@ export default function ProductsPage() {
     },
     {
       name: "Vitamin B Complex 100ml ",
-      price: "₦430",
-      image: "c:\\Users\\hp\\Downloads\\B Complex.png",
+      price: "₦1,600",
+      image: "/products/Vitamin B Complex.png",
       description: "Vitamin B Complex Syrup.",
       dosage: "10ml",
       pack: "1x10x60",
       category: "for children growing",
     },
     {
-      name: "Skinserv 100ml", 
-      price: "₦350",
-      image: "c:\\Users\\hp\\Downloads\\Skinserv.png",
-      description: "methylated spirit.",
-      dosage: "external use only",
-      category: "skin disinfection, antiseptic, prior to injection or surgery", 
-    },
-    {
       name: "Skinserv 200ml", 
-      price: "₦600", 
-      image: "c:\\Users\\hp\\Downloads\\Skinserv.png",
+      price: "₦2,000", 
+      image: "/products/Skinserv.png",
       description: "methylated spirit.",
       dosage: "external use only",
       category: "skin disinfection, antiseptic, prior to injection or surgery", 
     },
     {
-      name: "Nalolyn expectorant 100ml",
-      price: "₦495",
-      image: "c:\\Users\\hp\\Downloads\\Nalolyn.png",
+      name: "Nalolyn 100ml",
+      price: "₦1,500",
+      image: "/products/Nalolyn.png",
       description: "Nalolyn Syrup.",
       dosage: "10ml",
       pack: "1x10x60",
@@ -164,19 +147,27 @@ export default function ProductsPage() {
   return (
     <div style={{ padding: "30px" }}>
       <h1>Nalis Pharma Products</h1>
-
+<div
+  style={{
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+    gap: "20px",
+  }}
+></div>
       {products.map((product, index) => (
         <div
           key={index}
           style={{
             border: "1px solid #ccc",
             padding: "15px",
-            mar1x20ginTop: "15px",
+            marginTop: "15px",
             borderRadius: "10px",
         }}
         >
+          <img src={product.image} alt={product.name} style={{ width: "100%", height: "200px", objectFit: "contain" }} />
           <h2>{product.name}</h2>
-          <p>{product.price}</p>
+          <p>{product.description}</p>
+          <p>Price: {product.price}</p>
 
           <button
             style={{
