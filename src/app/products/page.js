@@ -3,7 +3,7 @@ export default function ProductsPage() {
     {
       name: "Nalis Paracetamol 60ml",
       price: "₦1,200",
-      image: "/products/Nalis Paracetamol.png",
+      image: "/products/nalis Paracetamol.png",
       description: "Paracetamol Syrup.",
       dosage: "10ml",
       pack: "1x10x100",
@@ -12,7 +12,7 @@ export default function ProductsPage() {
     {
       name: "Nalis Vitamin C",
       price: "₦1,300",
-      image: "/products/Nalis Vitamin C.png",
+      image: "/products/nalis Vitamin C.png",
       description: "Vitamin C Syrup.",
       dosage: "10ml",
       pack: "1x10x60",
@@ -21,7 +21,7 @@ export default function ProductsPage() {
     {
       name: "Nalistide 200ml",
       price: "₦2,300",
-      image: "/products/Nalistide 200ml.png",
+      image: "/products/nalistide 200ml.png",
       description: "Nalistide Syrup",
       dosage: "10ml",
       pack: "1x6x24",
@@ -30,7 +30,7 @@ export default function ProductsPage() {
     {
       name: "Lumaforce Tablet x6",
       price: "₦1,500",
-      image: "/products/Lumaforce.png",
+      image: "/products/lumaforce.png",
       description: "Lumaforce Tablet.",
       dosage: "6 tablets",
         pack: "10x30",
@@ -57,7 +57,7 @@ export default function ProductsPage() {
     {
       name: "Nalotrim 50ml", 
       price: "₦1,200",
-      image: "/products/Nalotrim.png",
+      image: "/products/nalotrim.png",
       description: "Nalotrim Syrup.",
       dosage: "10ml",
       pack: "1x10x100",
@@ -66,7 +66,7 @@ export default function ProductsPage() {
     {
       name: "Nalovite Tonic 200ml",
       price: "₦2,500",
-      image: "/products/Nalovite Tonic.png",
+      image: "/products/nalovite tonic.png",
       description: "Nalovite Syrup.",
       dosage: "10ml",
       pack: "1x10x24",
@@ -75,7 +75,7 @@ export default function ProductsPage() {
     {
       name: "Cakafen 100ml",
       price: "₦1,200",
-      image: "/products/Cakafen.png",
+      image: "/products/cakafen.png",
       description: "Cakafen Syrup.",
       dosage: "10ml",
       pack: "1x10x60",
