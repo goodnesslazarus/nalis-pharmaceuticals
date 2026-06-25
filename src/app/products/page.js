@@ -39,7 +39,7 @@ export default function ProductsPage() {
     {
       name: "Ibuprofen 100ml",
       price: "₦1,400",
-      image: "/products/Ibuprofen.png",
+      image: "/products/ibuprofen.png",
       description: "Ibuprofen Syrup.",
       dosage: "10ml",
         pack: "1x10x60",
@@ -168,7 +168,6 @@ export default function ProductsPage() {
           <h2>{product.name}</h2>
           <p>{product.description}</p>
           <p>Price: {product.price}</p>
-
           <button
             style={{
               backgroundColor: "green",
