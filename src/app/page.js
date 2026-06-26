@@ -7,10 +7,16 @@ export default function Home() {
   const { itemCount } = useCart();
 
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-900">
+    <main className="min-h-screen bg-gradient-to-br from-emerald-100 via-white to-emerald-200 text-slate-900">
       <div className="mx-auto max-w-7xl px-6 py-8">
-        <nav className="flex flex-wrap items-center justify-between gap-4 rounded-3xl border border-slate-200 bg-white px-6 py-4 shadow-lg shadow-slate-200/40">
-          <div className="text-xl font-semibold text-cyan-600">Nalis Pharmaceuticals</div>
+        <nav className="flex flex-wrap items-center justify-between gap-4 rounded-3xl border border-emerald-200 bg-white/90 px-6 py-4 shadow-lg shadow-emerald-200/60 backdrop-blur-xl">
+          <div className="flex items-center gap-4">
+            <img src="/logo.svg" alt="Nalis Pharma logo" className="h-12 w-auto" />
+            <div>
+              <p className="text-lg font-semibold text-emerald-700">Nalis Pharmaceuticals</p>
+              <p className="text-xs uppercase tracking-[0.28em] text-slate-500">Trusted pharmaceutical sourcing</p>
+            </div>
+          </div>
           <div className="flex flex-wrap items-center gap-3 text-sm font-medium text-slate-700">
             <a href="#home" className="transition hover:text-cyan-600">Home</a>
             <Link href="/Products" className="transition hover:text-cyan-600">Products</Link>
@@ -23,12 +29,12 @@ export default function Home() {
         </nav>
 
         <section id="home" className="mt-10 grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-          <div className="rounded-[32px] border border-slate-200 bg-white p-10 shadow-xl shadow-slate-200/60">
-            <span className="inline-flex rounded-full bg-cyan-100 px-4 py-2 text-sm font-semibold uppercase tracking-[0.3em] text-cyan-600">
+          <div className="rounded-[32px] border border-emerald-200 bg-white p-10 shadow-xl shadow-emerald-100/60">
+            <span className="inline-flex rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold uppercase tracking-[0.3em] text-emerald-700">
               Trusted Healthcare Supply
             </span>
-            <h1 className="mt-8 text-5xl font-semibold leading-tight text-slate-950 sm:text-6xl">
-              Bright pharmaceutical sourcing for clinics, pharmacies and healthcare teams.
+            <h1 className="mt-8 text-5xl font-bold leading-tight text-slate-950 sm:text-6xl">
+              Welcome to Nalis Pharmaceuticals
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
               Nalis Pharmaceuticals delivers high-quality medicines, bulk essentials, and dependable order management. Explore our catalog, secure your cart, and place orders with confidence.
