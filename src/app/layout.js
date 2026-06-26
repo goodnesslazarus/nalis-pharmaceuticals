@@ -1,3 +1,5 @@
+import "./globals.css";
+
 export const metadata = {
   title: "Nalis Pharmaceuticals Ltd - Trusted Healthcare Products",
   description:
@@ -8,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="min-h-screen bg-slate-950 text-slate-100 antialiased">{children}</body>
     </html>
   );
 }
