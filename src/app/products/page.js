@@ -1,191 +1,129 @@
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import { useCart } from "../../lib/useCart";
+
+const products = [
+  {
+    name: "Nalis Paracetamol 60ml",
+    price: "₦1,200",
+    image: "/Products/Nalis Paracetamol.png",
+    description: "Paracetamol syrup for pain and fever relief.",
+  },
+  {
+    name: "Nalis Vitamin C",
+    price: "₦1,300",
+    image: "/Products/Nalis Vitamin C.png",
+    description: "Vitamin C syrup to support immunity.",
+  },
+  {
+    name: "Nalistide 200ml",
+    price: "₦2,300",
+    image: "/Products/Nalistide 200ml.png",
+    description: "Antibiotic syrup for infections.",
+  },
+  {
+    name: "Lumaforce Tablet x6",
+    price: "₦1,500",
+    image: "/Products/Lumaforce.png",
+    description: "Antimalarial tablet pack.",
+  },
+  {
+    name: "Ibuprofen 100ml",
+    price: "₦1,400",
+    image: "/Products/Ibuprofen.png",
+    description: "Pain relief syrup for fever and headaches.",
+  },
+  {
+    name: "Veelam 100ml",
+    price: "₦1,200",
+    image: "/Products/Veelam.png",
+    description: "Cold and flu syrup.",
+  },
+];
+
 export default function ProductsPage() {
-  const products = [
-    {
-      name: "Nalis Paracetamol 60ml",
-      price: "₦1,200",
-      image: "/products/nalis Paracetamol.png",
-      description: "Paracetamol Syrup.",
-      dosage: "10ml",
-      pack: "1x10x100",
-      category: "pain relief",
-    },
-    {
-      name: "Nalis Vitamin C",
-      price: "₦1,300",
-      image: "/products/nalis Vitamin C.png",
-      description: "Vitamin C Syrup.",
-      dosage: "10ml",
-      pack: "1x10x60",
-      category: "Ascorbic Acid 100mg",
-    },
-    {
-      name: "Nalistide 200ml",
-      price: "₦2,300",
-      image: "/products/nalistide 200ml.png",
-      description: "Nalistide Syrup",
-      dosage: "10ml",
-      pack: "1x6x24",
-      category: "antibiotic",
-    },
-    {
-      name: "Lumaforce Tablet x6",
-      price: "₦1,500",
-      image: "/products/lumaforce.png",
-      description: "Lumaforce Tablet.",
-      dosage: "6 tablets",
-        pack: "10x30",
-      category: "antimalarial",
-    },
-    {
-      name: "Ibuprofen 100ml",
-      price: "₦1,400",
-      image: "/products/ibuprofen.png",
-      description: "Ibuprofen Syrup.",
-      dosage: "10ml",
-        pack: "1x10x60",
-      category: "pain relief",
-    },
-    {
-      name: "veelam 100ml",
-      price: "₦1,200",
-      image: "/products/veelam.png",
-      description: "veelam Syrup.",
-      dosage: "10ml",
-      pack: "1X10X60",
-      category: "pain relief  cold, fever, flu",
-    },
-    {
-      name: "Nalotrim 50ml", 
-      price: "₦1,200",
-      image: "/products/nalotrim.png",
-      description: "Nalotrim Syrup.",
-      dosage: "10ml",
-      pack: "1x10x100",
-      category: "pain relief, co timoxazole",
-    },
-    {
-      name: "Nalovite Tonic 200ml",
-      price: "₦2,500",
-      image: "/products/nalovite tonic.png",
-      description: "Nalovite Syrup.",
-      dosage: "10ml",
-      pack: "1x10x24",
-      category: "iron B complex, blood Tonic",
-    },
-    {
-      name: "Cakafen 100ml",
-      price: "₦1,200",
-      image: "/products/cakafen.png",
-      description: "Cakafen Syrup.",
-      dosage: "10ml",
-      pack: "1x10x60",
-      category: "cough lintus", 
-    },
-    {
-      name: "Cosine",
-      price: "₦1,200",
-      image: "/products/Cosine.png",
-      description: "Cosine syrup",
-      dosage: "10ml",
-      pack:   "1x10x60",
-      category: "cough, cold and catarrh",
-    },
-    {
-      name: "Prytune expectorant 100ml",
-      price: "₦1,400",
-      image: "/products/Prytune expectorant.png",
-      description: "Prytune expectorant.",
-      dosage: "10ml",
-       pack: "1x20",
-      category: "cough, cold and catarrh",
-    },
-    {
-      name: "Prytune Syrup 100ml",
-      price: "₦1,200", 
-      image: "/products/Prytune Syrup.png",
-      description: "Prytune Syrup.",
-      dosage: "10ml",
-      pack: "1x20",
-      category: "cough, cold and catarrh",
-    },
-    {
-      name: "Salbutamol Syrup 100ml",
-      price: "₦1,500",
-      image: "/products/Salbutamol.png",
-      description: "Salbutamol Syrup.",
-      dosage: "10ml",
-      pack: "1x10x60",
-      category: "asthma, bronchitis, chronic obstructive pulmonary disease (COPD)",
-    },
-    {
-      name: "Vitamin B Complex 100ml ",
-      price: "₦1,600",
-      image: "/products/Vitamin B Complex.png",
-      description: "Vitamin B Complex Syrup.",
-      dosage: "10ml",
-      pack: "1x10x60",
-      category: "for children growing",
-    },
-    {
-      name: "Skinserv 200ml", 
-      price: "₦2,000", 
-      image: "/products/Skinserv.png",
-      description: "methylated spirit.",
-      dosage: "external use only",
-      category: "skin disinfection, antiseptic, prior to injection or surgery", 
-    },
-    {
-      name: "Nalolyn 100ml",
-      price: "₦1,500",
-      image: "/products/Nalolyn.png",
-      description: "Nalolyn Syrup.",
-      dosage: "10ml",
-      pack: "1x10x60",
-      category: "cough, cold and catarrh",
-    },
-    ];
+  const { addItem, itemCount } = useCart();
+  const [toast, setToast] = useState("");
+
+  const handleAdd = (product) => {
+    addItem(product);
+    setToast(`${product.name} added to cart`);
+    window.setTimeout(() => setToast(""), 2200);
+  };
+
   return (
-    <div style={{ padding: "30px" }}>
-      <h1>Nalis Pharma Products</h1>
-<div
-  style={{
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-    gap: "20px",
-  }}
-></div>
-      {products.map((product, index) => (
-        <div
-          key={index}
-          style={{
-            border: "1px solid #ccc",
-            padding: "15px",
-            marginTop: "15px",
-            borderRadius: "10px",
-        }}
-        >
-          <img src={product.image} alt={product.name} style={{ width: "100%", height: "200px", objectFit: "contain" }} />
-          <h2>{product.name}</h2>
-          <p>{product.description}</p>
-          <p>Price: {product.price}</p>
-          <button
-            style={{
-              backgroundColor: "green",
-              color: "white",
-              padding: "10px",
-              border: "none",
-              borderRadius: "5px",
-            }}
+    <main className="min-h-screen bg-slate-50 text-slate-900">
+      <div className="mx-auto max-w-7xl px-6 py-10">
+        {toast ? (
+          <div
+            role="status"
+            aria-live="polite"
+            className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-3xl bg-slate-900 px-6 py-4 text-sm font-semibold text-white shadow-2xl shadow-slate-900/20 transition duration-300 ease-out"
           >
-            Order Now
-          </button><a
-            href={`https://wa.me/2348161427836?text=Hello, I want to order ${product.name} (${product.price})`}
-            target="_blank"
->
-  <button>Order on WhatsApp</button>
-</a>
+            <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-emerald-400 text-slate-900">
+              ✓
+            </span>
+            <span>{toast}</span>
+          </div>
+        ) : null}
+
+        <header className="mb-10 flex flex-col gap-6 rounded-[32px] bg-white px-8 py-8 shadow-xl shadow-slate-200 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <p className="text-sm uppercase tracking-[0.24em] text-slate-500">Products</p>
+            <h1 className="mt-3 text-4xl font-semibold text-slate-900">Nalis Pharmaceuticals Catalog</h1>
+            <p className="mt-4 max-w-2xl text-slate-600">Browse our most popular pharmaceutical products and add them to your cart for persistent checkout.</p>
+          </div>
+          <div className="flex flex-wrap items-center gap-4">
+            <Link
+              href="/Products/cart"
+              className="inline-flex items-center justify-center rounded-3xl bg-blue-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
+            >
+              View Cart ({itemCount})
+            </Link>
+            <Link
+              href="/"
+              className="inline-flex items-center justify-center rounded-3xl border border-slate-200 bg-slate-50 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+            >
+              Back to Home
+            </Link>
+          </div>
+        </header>
+
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {products.map((product) => (
+            <article key={product.name} className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+              <div className="h-64 bg-slate-100 p-6">
+                <img src={product.image} alt={product.name} className="h-full w-full object-contain" />
+              </div>
+              <div className="space-y-4 p-6">
+                <div>
+                  <h2 className="text-xl font-semibold text-slate-900">{product.name}</h2>
+                  <p className="mt-2 text-sm text-slate-500">{product.description}</p>
+                </div>
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="text-lg font-semibold text-slate-900">{product.price}</p>
+                  <div className="flex flex-wrap gap-3">
+                    <button
+                      onClick={() => handleAdd(product)}
+                      className="rounded-3xl bg-blue-700 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
+                    >
+                      Add to Cart
+                    </button>
+                    <Link
+                      href="/Products/cart"
+                      className="rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
+                    >
+                      View Cart
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    </main>
   );
 }

@@ -1,91 +1,143 @@
+"use client";
+
+import Link from "next/link";
+import { useCart } from "../lib/useCart";
+
 export default function Home() {
+  const { itemCount } = useCart();
+
   return (
-    <main className="min-h-screen bg-white">
-      {/* Navbar */}
-      <nav className="flex justify-between items-center px-10 py-5 bg-green-800 text-white">
-        <h1 className="text-3xl font-bold">Nalis Pharma</h1>
+    <main className="min-h-screen bg-slate-50 text-slate-900">
+      <div className="mx-auto max-w-7xl px-6 py-6">
+        <nav className="flex flex-wrap items-center justify-between gap-4 rounded-3xl bg-white/90 px-6 py-4 shadow-xl shadow-slate-200 backdrop-blur-lg">
+          <div className="text-xl font-semibold text-slate-900">Nalis Pharmaceuticals</div>
+          <div className="flex flex-wrap items-center gap-4 text-sm font-medium text-slate-700">
+            <a href="#home" className="hover:text-slate-900">Home</a>
+            <a href="#products" className="hover:text-slate-900">Products</a>
+            <a href="#about" className="hover:text-slate-900">About Us</a>
+            <a href="#contact" className="hover:text-slate-900">Contact</a>
+            <Link href="/Products/cart" className="inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-semibold text-slate-900 transition hover:bg-slate-100">
+              Cart {itemCount > 0 ? `(${itemCount})` : "(0)"}
+            </Link>
+          </div>
+        </nav>
 
-        <div className="flex gap-8 text-lg">
-          <a href="#">Home</a>
-          <a href="#">Products</a>
-          <a href="#">About Us</a>
-          <a href="#">Contact</a>
-          <a href="#">Careers</a>
-        </div>
+        <section id="home" className="mt-10 rounded-[32px] bg-blue-700 px-8 py-16 text-white shadow-2xl shadow-slate-300/40">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <div>
+              <p className="mb-4 inline-flex rounded-full bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-sky-100">
+                Pharmaceutical Solutions
+              </p>
+              <h1 className="text-5xl font-bold leading-tight sm:text-6xl">
+                Pharmaceutical Solutions for Every Stage of Life
+              </h1>
+              <p className="mt-6 max-w-2xl text-lg text-slate-100/90">
+                Nalis Pharmaceuticals specializes in bulk supply for hospitals, clinics, and pharmacies. Browse our catalog and add products to your cart with a single click.
+              </p>
 
-        <button className="bg-white text-green-800 px-5 py-2 rounded-full font-semibold">
-          Order on WhatsApp
-        </button>
-      </nav>
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+                <Link href="/Products" className="inline-flex items-center justify-center rounded-3xl bg-white px-8 py-4 text-base font-semibold text-slate-900 shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5 hover:bg-slate-100">
+                  Browse Products
+                </Link>
+                <Link href="#products" className="inline-flex items-center justify-center rounded-3xl border border-white/30 bg-white/10 px-8 py-4 text-base font-semibold text-white transition hover:bg-white/20">
+                  Explore Featured Items
+                </Link>
+              </div>
+            </div>
 
-      {/* Hero Section */}
-      <section className="grid md:grid-cols-2 gap-10 items-center px-16 py-20 bg-green-50 rounded-xl mx-10 mt-10">
-        <div>
-          <h2 className="text-6xl font-bold text-green-800 leading-tight">
-            Pharmaceutical Solutions for Every Stage of Life
-          </h2>
+            <div className="relative flex items-center justify-center">
+              <div className="absolute -right-8 top-10 h-40 w-40 rounded-full bg-sky-500/20 blur-3xl"></div>
+              <div className="absolute -bottom-6 left-6 h-24 w-24 rounded-full bg-white/15 blur-3xl"></div>
+              <div className="relative overflow-hidden rounded-[36px] border border-white/10 bg-white/10 p-8 shadow-2xl shadow-slate-900/10 backdrop-blur-xl">
+                <img src="/pharma-hero.png" alt="Pharma illustration" className="h-[420px] w-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </section>
 
-          <p className="mt-6 text-lg text-gray-700">
-            Nalis Pharmaceuticals specializes in bulk supply for hospitals,
-            clinics, and pharmacies. Browse our catalog and place your bulk
-            orders directly via WhatsApp.
-          </p>
+        <section id="products" className="mt-12 rounded-[32px] bg-white px-6 py-12 shadow-xl shadow-slate-200">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p className="text-sm uppercase tracking-[0.24em] text-slate-500">Featured categories</p>
+              <h2 className="mt-2 text-3xl font-semibold text-slate-900">Shop by category</h2>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {['All Products', 'Antibiotics', 'Pain Management', 'Vitamins', 'Chronic Care', 'Clinical Equipment'].map((label) => (
+                <span key={label} className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm text-slate-700">
+                  {label}
+                </span>
+              ))}
+            </div>
+          </div>
 
-          <button className="mt-8 bg-green-700 text-white px-8 py-4 rounded-xl text-lg">
-            Order Bulk via WhatsApp
-          </button>
-        </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {[
+              { title: 'Paracetamol', subtitle: 'Pain relief', price: '₦1,200' },
+              { title: 'Cough Syrup', subtitle: 'Cold & flu support', price: '₦1,300' },
+              { title: 'Salbutamol', subtitle: 'Asthma relief', price: '₦1,500' },
+            ].map((item) => (
+              <div key={item.title} className="rounded-[28px] border border-slate-200 bg-slate-50 p-6 shadow-sm">
+                <div className="mb-4 h-40 rounded-3xl bg-slate-100 p-6 text-slate-600">
+                  <div className="text-xl font-semibold">{item.title}</div>
+                  <p className="mt-3 text-sm text-slate-500">{item.subtitle}</p>
+                </div>
+                <p className="text-2xl font-semibold text-slate-900">{item.price}</p>
+                <Link href="/Products" className="mt-6 inline-flex w-full items-center justify-center rounded-3xl bg-blue-700 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-800">
+                  View Product Cart
+                </Link>
+              </div>
+            ))}
+          </div>
+        </section>
 
-        <div className="flex justify-center">
-          <img
-            src="/medicine.png"
-            alt="Pharmaceutical products"
-            className="w-[500px]"
-          />
-        </div>
-      </section>
-
-      {/* Features */}
-      <section className="grid md:grid-cols-4 gap-8 px-16 py-16">
-        {[
-          "Quality Assured",
-          "Reliable Supply",
-          "Dedicated Support",
-          "Trusted by Professionals",
-        ].map((item, index) => (
-          <div key={index} className="text-center p-6 shadow rounded-xl">
-            <h3 className="font-bold text-green-800 text-xl">{item}</h3>
-            <p className="mt-2 text-gray-600">
-              Delivering trusted pharmaceutical products nationwide.
+        <section id="about" className="mt-12 grid gap-10 rounded-[32px] bg-white px-6 py-12 shadow-xl shadow-slate-200 lg:grid-cols-2">
+          <div>
+            <p className="text-sm uppercase tracking-[0.24em] text-slate-500">About Nalis</p>
+            <h2 className="mt-3 text-3xl font-semibold text-slate-900">Premium bulk pharmaceuticals with reliable delivery.</h2>
+            <p className="mt-5 text-base leading-7 text-slate-600">
+              We supply hospitals, clinics, and pharmacies with trusted pharmaceutical brands and medical essentials. Order in bulk and get smooth support from our customer team.
             </p>
           </div>
-        ))}
-      </section>
+          <div className="grid gap-6 sm:grid-cols-2">
+            <div className="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
+              <h3 className="font-semibold text-slate-900">Quality</h3>
+              <p className="mt-3 text-sm text-slate-600">Safe, lab-tested products for hospitals and clinics.</p>
+            </div>
+            <div className="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
+              <h3 className="font-semibold text-slate-900">Support</h3>
+              <p className="mt-3 text-sm text-slate-600">Fast response through WhatsApp ordering.</p>
+            </div>
+            <div className="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
+              <h3 className="font-semibold text-slate-900">Bulk Orders</h3>
+              <p className="mt-3 text-sm text-slate-600">Competitive pricing for larger hospital purchases.</p>
+            </div>
+            <div className="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
+              <h3 className="font-semibold text-slate-900">Delivery</h3>
+              <p className="mt-3 text-sm text-slate-600">Local shipping across Lagos and nationwide.</p>
+            </div>
+          </div>
+        </section>
 
-      {/* Categories */}
-      <section className="px-16 pb-20">
-        <h2 className="text-4xl font-bold text-green-800 mb-8">
-          Shop by Categories
-        </h2>
-
-        <div className="flex gap-4 flex-wrap">
-          {[
-            "All Products",
-            "Antibiotics",
-            "Pain Management",
-            "Vitamins & Supplements",
-            "Chronic Care",
-            "Clinical Equipment",
-          ].map((cat, index) => (
-            <button
-              key={index}
-              className="bg-green-100 text-green-800 px-6 py-3 rounded-full"
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-      </section>
+        <section id="contact" className="mt-12 rounded-[32px] bg-white px-6 py-12 shadow-xl shadow-slate-200">
+          <div className="grid gap-10 lg:grid-cols-3">
+            <div>
+              <p className="text-sm uppercase tracking-[0.24em] text-slate-500">Contact Us</p>
+              <h2 className="mt-3 text-3xl font-semibold text-slate-900">Get in touch for bulk orders</h2>
+            </div>
+            <div className="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
+            <p className="font-semibold text-slate-900">Phone</p>
+            <p className="mt-3 text-slate-600">+234 8161427836</p>
+            <div className="mt-4 inline-flex rounded-3xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white">
+              Call us to place your order
+            </div>
+            </div>
+            <div className="rounded-[28px] border border-slate-200 bg-slate-50 p-6">
+              <p className="font-semibold text-slate-900">Email</p>
+              <p className="mt-3 text-slate-600">info@nalispharma.com</p>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
   );
 }
