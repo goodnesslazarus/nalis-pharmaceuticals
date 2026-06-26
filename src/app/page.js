@@ -10,12 +10,9 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-br from-emerald-100 via-white to-emerald-200 text-slate-900">
       <div className="mx-auto max-w-7xl px-6 py-8">
         <nav className="flex flex-wrap items-center justify-between gap-4 rounded-3xl border border-emerald-200 bg-white px-6 py-4 shadow-xl shadow-emerald-100/60">
-          <div className="flex items-center gap-4">
-            <img src="/logo.svg" alt="Nalis Pharma logo" className="h-12 w-auto" />
-            <div>
-              <p className="text-lg font-semibold text-emerald-900">Nalis Pharmaceuticals</p>
-              <p className="text-xs uppercase tracking-[0.28em] text-slate-500">Trusted pharmaceutical sourcing</p>
-            </div>
+          <div>
+            <p className="text-lg font-semibold text-emerald-900">Nalis Pharmaceuticals</p>
+            <p className="text-xs uppercase tracking-[0.28em] text-slate-500">Trusted pharmaceutical sourcing</p>
           </div>
           <div className="flex flex-wrap items-center gap-4 text-sm font-medium text-slate-700">
             <a href="#home" className="transition hover:text-emerald-900">Home</a>
