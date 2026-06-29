@@ -78,14 +78,14 @@ const products = [
   {
     name: "Nalovite",
     price: "₦2,400",
-    image: "/Products/Nalovite.png",
+    image: "/Products/Nalovite Tonic.png",
     description: "Iron + B complex Tonic.",
     category: "Imunity complex Tonic",
   },
   {
     name: "Prytune Expectorant",
     price: "₦1,100",
-    image: "/Products/Prytune Expectorant.png",
+    image: "/Products/Prytune expectorant.png",
     description: "Expectorant for chest congestion.",
     category: "Cough,and flu",
   },
@@ -106,7 +106,7 @@ const products = [
   {
     name: "Skinserve",
     price: "₦1,800",
-    image: "/Products/Skinserve.png",
+    image: "/Products/Skinserv.png",
     description: "methylated spirit for skin disinfection.",
     category: "methylated spirit",
   },
