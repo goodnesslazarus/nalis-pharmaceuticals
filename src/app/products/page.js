@@ -22,7 +22,7 @@ const products = [
   {
     name: "Nalistide 200ml",
     price: "₦2,000",
-    image: "/products/Nalistide 200ml.png",
+    image: "/products/Nalistide%20200ml.png",
     description: "Antacid syrup for stomach gas and indigestion.",
     category: "relief stomach gas",
   },
@@ -78,21 +78,21 @@ const products = [
   {
     name: "Nalovite",
     price: "₦2,400",
-    image: "/products/Nalovite Tonic.png",
+    image: "/products/Nalovite%20Tonic.png",
     description: "Iron + B complex Tonic.",
     category: "Imunity complex Tonic",
   },
   {
     name: "Prytune Expectorant",
     price: "₦1,100",
-    image: "/products/Prytune expectorant.png",
+    image: "/products/Prytune%20expectorant.png",
     description: "Expectorant for chest congestion.",
     category: "Cough,and flu",
   },
   {
     name: "Prytune Syrup",
     price: "₦1,100",
-    image: "/products/Prytune Syrup.png",
+    image: "/products/Prytune%20Syrup.png",
     description: "Syrup for cold and flu symptoms.",
     category: "Cold, cough & Flu",
   },
@@ -202,8 +202,9 @@ export default function ProductsPage() {
                         <img
                           src={product.image}
                           alt={product.name}
-                          loading="lazy"
-                          className="relative z-10 h-full w-full object-contain"
+                          loading="eager"
+                          decoding="async"
+                          className="relative z-10 h-full w-full object-contain block"
                         />
                       </div>
                       <div className="space-y-4 p-6">
