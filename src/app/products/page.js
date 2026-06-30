@@ -122,7 +122,7 @@ const categories = [
   "All Products",
   "Pain Management",
   "Vitamins & Immunity",
-  "Antimalarial",
+  "Antimalaria",
   "Cold & Flu",
   "Cough & Congestion",
   "Respiratory",

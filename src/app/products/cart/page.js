@@ -123,8 +123,16 @@ export default function CartPage() {
             </div>
             <div className="rounded-[28px] bg-slate-50 p-6">
               <p className="text-sm uppercase tracking-[0.24em] text-slate-500">Contact</p>
-              <p className="mt-4 text-lg font-semibold text-slate-900">+234 8161427836</p>
+              <p className="mt-4 text-lg font-semibold text-slate-900">+234 814 718 0296</p>
               <p className="mt-3 text-sm text-slate-600">Available weekdays, 9am–5pm.</p>
+              <a
+                href="https://wa.me/2348147180296?text=Hello%2C%20I%20would%20like%20to%20place%20a%20product%20order.%20Please%20send%20me%20a%20quote%20and%20delivery%20details."
+                target="_blank"
+                rel="noreferrer"
+                className="mt-6 inline-flex w-full items-center justify-center rounded-3xl bg-emerald-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-800"
+              >
+                Message us on WhatsApp
+              </a>
             </div>
           </aside>
         </div>
