@@ -10,7 +10,7 @@ const products = [
     price: "₦1,000",
     image: "/Products/Nalis Paracetamol.png",
     description: "Paracetamol syrup for pain and fever relief.",
-    category: "Pain Management",
+    category: "Pain relief",
   },
   {
     name: "Nalis Vitamin C",
@@ -23,15 +23,15 @@ const products = [
     name: "Nalistide 200ml",
     price: "₦2,000",
     image: "/Products/Nalistide 200ml.png",
-    description: "Antibiotic syrup for infections.",
-    category: "Antibiotics",
+    description: "Antacid syrup for stomach gas and indigestion.",
+    category: "relief stomach gas",
   },
   {
     name: "Lumaforce Tablet x6",
     price: "₦1,500",
     image: "/Products/Lumaforce.png",
     description: "Antimalarial tablet pack.",
-    category: "Antimalarial",
+    category: "Antimalaria",
   },
   {
     name: "Ibuprofen 100ml",
@@ -166,7 +166,7 @@ export default function ProductsPage() {
           </div>
           <div className="flex flex-wrap items-center gap-4">
             <Link
-              href="/Products/cart"
+              href="/products/cart"
               className="inline-flex items-center justify-center rounded-3xl bg-blue-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
             >
               View Cart ({itemCount})
@@ -216,7 +216,7 @@ export default function ProductsPage() {
                               Add to Cart
                             </button>
                             <Link
-                              href="/Products/cart"
+                              href="/products/cart"
                               className="rounded-3xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
                             >
                               View Cart

@@ -16,11 +16,11 @@ export default function Home() {
           </div>
           <div className="flex flex-wrap items-center gap-4 text-sm font-medium text-slate-700">
             <a href="#home" className="transition hover:text-emerald-900">Home</a>
-            <Link href="/Products" className="border-b-2 border-emerald-900 pb-1 text-emerald-900 transition hover:text-emerald-900">Products</Link>
+            <Link href="/products" className="border-b-2 border-emerald-900 pb-1 text-emerald-900 transition hover:text-emerald-900">Products</Link>
             <a href="#about" className="transition hover:text-emerald-900">About Us</a>
             <a href="#contact" className="transition hover:text-emerald-900">Contact</a>
             <Link
-              href="/Products/cart"
+              href="/products/cart"
               className="inline-flex items-center rounded-full bg-emerald-900 px-4 py-2 text-sm font-semibold text-white shadow-md shadow-emerald-700/30 transition hover:bg-emerald-800"
             >
               Cart {itemCount > 0 ? `(${itemCount})` : "(0)"}
@@ -49,14 +49,14 @@ export default function Home() {
                 Order Bulk via WhatsApp
               </a>
               <Link
-                href="/Products"
+                href="/products"
                 className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/5 px-8 py-4 text-base font-semibold text-white transition hover:bg-white/10"
               >
-                Browse Products
+                Browse products
               </Link>
             </div>
             <div className="mt-12 flex flex-wrap gap-3">
-              {['All Products', 'Antibiotics', 'Pain Management', 'Vitamins & Supplements', 'Chronic Care', 'Clinical Equipment'].map((label, index) => (
+              {['All products', 'Antibiotics', 'Pain Management', 'Vitamins & Supplements', 'Chronic Care', 'Clinical Equipment'].map((label, index) => (
                 <span
                   key={label}
                   className={`rounded-full px-4 py-2 text-sm font-semibold ${index === 0 ? 'bg-white text-emerald-950' : 'bg-white/10 text-emerald-100'}`}
@@ -100,8 +100,7 @@ export default function Home() {
               </div>
               <div className="grid gap-4">
                 {[
-                  { title: "Paracetamol", subtitle: "Fast pain relief", price: "₦1,200" },
-                  { title: "Cough Syrup", subtitle: "Cold & flu care", price: "₦1,300" },
+                  { title: "Nalis Paracetamol", subtitle: "Fast pain relief", price: "₦1,200" },
                   { title: "Salbutamol", subtitle: "Respiratory support", price: "₦1,500" },
                 ].map((item) => (
                   <div key={item.title} className="rounded-3xl border border-slate-200 bg-slate-50 px-5 py-4">
@@ -123,7 +122,7 @@ export default function Home() {
               <p className="mt-4 text-slate-600">
                 The Products page stores your selection and keeps your cart ready across sessions so customers can review and checkout at their pace.
               </p>
-              <Link href="/Products/cart" className="mt-8 inline-flex items-center rounded-full bg-emerald-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-800">
+              <Link href="/products/cart" className="mt-8 inline-flex items-center rounded-full bg-emerald-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-800">
                 View Cart
               </Link>
             </div>
@@ -143,17 +142,17 @@ export default function Home() {
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
               {
-                name: 'Dr. Amina',
-                role: 'Clinic Administrator',
+                name: 'Mr. Njamin',
+                role: 'Pharmacist',
                 quote: 'Nalis makes bulk ordering easy, and the delivery schedule is always reliable.',
               },
               {
-                name: 'Mr. Chike',
+                name: 'Miss. Goodness',
                 role: 'Pharmacy Owner',
                 quote: 'Great pricing and fast support. The product catalog is clear and professional.',
               },
               {
-                name: 'Nurse Joy',
+                name: 'Mr. Chinonso',
                 role: 'Hospital Procurement',
                 quote: 'Their cart persistence saved our team time during repeat orders.',
               },
@@ -176,7 +175,7 @@ export default function Home() {
               <h2 className="mt-2 text-3xl font-semibold text-slate-950">See our product portfolio</h2>
             </div>
             <div className="flex flex-wrap gap-3">
-              {['All Products', 'Antibiotics', 'Pain Management', 'Vitamins', 'Chronic Care', 'Clinical Equipment'].map((label) => (
+              {['All Products', 'Antimalaria', 'Pain Management', 'Gas Stomach', 'Vitamins', 'B complex', 'Clinical Equipment'].map((label) => (
                 <span key={label} className="rounded-full border border-slate-200 bg-slate-100 px-4 py-2 text-sm text-slate-700">
                   {label}
                 </span>
@@ -186,9 +185,14 @@ export default function Home() {
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
-              { title: 'Paracetamol', subtitle: 'Pain relief', price: '₦1,200', accent: 'bg-gradient-to-br from-emerald-900 to-emerald-600' },
-              { title: 'Cough Syrup', subtitle: 'Cold & flu support', price: '₦1,300', accent: 'bg-gradient-to-br from-emerald-900 to-emerald-600' },
-              { title: 'Salbutamol', subtitle: 'Asthma relief', price: '₦1,500', accent: 'bg-gradient-to-br from-emerald-900 to-emerald-600' },
+              { title: 'Nalis Paracetamol', subtitle: 'Pain relief', price: '₦1,200', accent: 'bg-gradient-to-br from-emerald-900 to-emerald-600' },
+              { title: 'Skinserve', subtitle: 'methylated spirit', price: '₦1,800', accent: 'bg-gradient-to-br from-emerald-900 to-emerald-600' },
+              { title: 'Nalistide', subtitle: 'relief of stomach gas', price: '₦2,000', accent: 'bg-gradient-to-br from-emerald-900 to-emerald-600' },
+              { title: 'Nalovite', subtitle: 'Iron boost', price: '₦2,400', accent: 'bg-gradient-to-br from-emerald-900 to-emerald-600' },
+              { title: 'Lumaforce', subtitle: 'antimalaria', price: '₦1,500', accent: 'bg-gradient-to-br from-emerald-900 to-emerald-600' },
+              { title: 'Ibuprofen', subtitle: 'pain and fever relief', price: '₦1,200', accent: 'bg-gradient-to-br from-emerald-900 to-emerald-600' },
+              { title: 'Nalis vitamin C', subtitle: 'vitamin C syrup', price: '₦1,100', accent: 'bg-gradient-to-br from-emerald-900 to-emerald-600' },
+              { title: 'Salbutamol', subtitle: 'Asthma relief', price: '₦1,200', accent: 'bg-gradient-to-br from-emerald-900 to-emerald-600' },
             ].map((item) => (
               <div key={item.title} className="rounded-[32px] border border-slate-200 bg-slate-50 p-6 shadow-lg shadow-slate-200/40">
                 <div className={`mb-4 h-40 rounded-[28px] p-6 text-white ${item.accent}`}>
@@ -197,7 +201,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center justify-between gap-4">
                   <p className="text-2xl font-semibold text-slate-950">{item.price}</p>
-                  <Link href="/Products" className="inline-flex items-center justify-center rounded-full bg-emerald-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-800">
+                  <Link href="/products" className="inline-flex items-center justify-center rounded-full bg-emerald-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-800">
                     View Products
                   </Link>
                 </div>
@@ -272,14 +276,14 @@ export default function Home() {
                   <p className="text-sm uppercase tracking-[0.24em] text-slate-500">Company</p>
                   <ul className="mt-4 space-y-3 text-sm text-slate-600">
                     <li><a href="#about" className="transition hover:text-emerald-900">About</a></li>
-                    <li><Link href="/Products" className="transition hover:text-emerald-900">Products</Link></li>
+                    <li><Link href="/products" className="transition hover:text-emerald-900">Products</Link></li>
                     <li><a href="#contact" className="transition hover:text-emerald-900">Contact</a></li>
                   </ul>
                 </div>
                 <div>
                   <p className="text-sm uppercase tracking-[0.24em] text-slate-500">Resources</p>
                   <ul className="mt-4 space-y-3 text-sm text-slate-600">
-                    <li><Link href="/Products/cart" className="transition hover:text-emerald-900">View Cart</Link></li>
+                    <li><Link href="/products/cart" className="transition hover:text-emerald-900">View Cart</Link></li>
                     <li><a href="#products" className="transition hover:text-emerald-900">Catalog</a></li>
                     <li><a href="#home" className="transition hover:text-emerald-900">Top</a></li>
                   </ul>

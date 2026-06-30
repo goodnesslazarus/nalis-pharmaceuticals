@@ -18,7 +18,7 @@ export default function CartPage() {
             </p>
           </div>
           <Link
-            href="/Products"
+            href="/products"
             className="inline-flex items-center justify-center rounded-3xl bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
           >
             Back to Catalog
@@ -106,7 +106,7 @@ export default function CartPage() {
                 <p className="text-lg font-semibold text-slate-900">Your cart is empty</p>
                 <p className="mt-4 text-slate-600">Add products from the catalog and they will stay saved until you clear them.</p>
                 <Link
-                  href="/Products"
+                  href="/products"
                   className="mt-8 inline-flex rounded-3xl bg-blue-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
                 >
                   Browse Products
