@@ -100,7 +100,6 @@ const products = [
     name: "Salbutamol",
     price: "₦1,200",
     image: "/Products/Salbutamol.png",
-    description: "Bronchodilator for asthma and COPD.",
     category: "Respiratory",
   },
   {
@@ -137,9 +136,10 @@ export default function ProductsPage() {
   const [toast, setToast] = useState("");
 
   const handleAdd = (product) => {
-    addItem(product);
-    setToast(`${product.name} added to cart`);
-    window.setTimeout(() => setToast(""), 2200);
+  addItem(product.name, product.price, product.image);
+  setToast(`${product.name} added to cart`);
+  window.setTimeout(() => setToast(""), 2200);
+};
   };
 
   return (
@@ -234,4 +234,4 @@ export default function ProductsPage() {
       </div>
     </main>
   );
-}
+
