@@ -149,14 +149,14 @@ export default function ProductsPage() {
           <div
             role="status"
             aria-live="polite"
-            className="fixed bottom-6 right-6 z-50 flex items-center gap-3 rounded-3xl bg-emerald-700 px-6 py-4 text-sm font-semibold text-white shadow-2xl shadow-emerald-700/20 transition duration-300 ease-out"
+            image: "/products/Nalis-Paracetamol.png",
           >
             <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-emerald-400 text-slate-900">
               ✓
             </span>
             <span>{toast}</span>
           </div>
-        ) : null}
+            image: "/products/Nalis-Vitamin-C.png",
 
         <header className="mb-10 flex flex-col gap-6 rounded-[32px] border border-emerald-200 bg-white px-8 py-8 shadow-xl shadow-emerald-200/50 sm:flex-row sm:items-center sm:justify-between">
           <div>
