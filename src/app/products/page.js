@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "../../lib/useCart";
 
@@ -136,10 +137,9 @@ export default function ProductsPage() {
   const [toast, setToast] = useState("");
 
   const handleAdd = (product) => {
-  addItem(product.name, product.price, product.image);
-  setToast(`${product.name} added to cart`);
-  window.setTimeout(() => setToast(""), 2200);
-};
+    addItem(product);
+    setToast(`${product.name} added to cart`);
+    window.setTimeout(() => setToast(""), 2200);
   };
 
   return (
@@ -198,8 +198,14 @@ export default function ProductsPage() {
                 <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
                   {categoryProducts.map((product) => (
                     <article key={product.name} className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-                      <div className="h-64 bg-emerald-50 p-6">
-                        <img src={product.image} alt={product.name} className="h-full w-full object-contain" />
+                      <div className="relative h-64 overflow-hidden rounded-t-[28px] bg-emerald-50">
+                        <Image
+                          src={product.image}
+                          alt={product.name}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          className="object-contain"
+                        />
                       </div>
                       <div className="space-y-4 p-6">
                         <div>
@@ -234,4 +240,4 @@ export default function ProductsPage() {
       </div>
     </main>
   );
-
+}
