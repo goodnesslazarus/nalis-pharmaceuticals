@@ -9,111 +9,111 @@ const products = [
   {
     name: "Nalis-Paracetamol 60ml",
     price: "₦1,000",
-    image: "/Products/Nalis-Paracetamol.png",
+    image: "/Products/nalis-paracetamol.png",
     description: "Paracetamol syrup for pain and fever relief.",
     category: "Pain relief",
   },
   {
     name: "Nalis-Vitamin-C",
     price: "₦1,100",
-    image: "/Products/Nalis-Vitamin-C.png",
+    image: "/Products/nalis-vitamin-C.png",
     description: "Vitamin C syrup to support immunity.",
     category: "Vitamins & Immunity",
   },
   {
     name: "Nalistide 200ml",
     price: "₦2,000",
-    image: "/Products/Nalistide 200ml.png",
+    image: "/Products/nalistide 200ml.png",
     description: "Antacid syrup for stomach gas and indigestion.",
     category: "relief stomach gas",
   },
   {
     name: "Lumaforce Tablet x6",
     price: "₦1,500",
-    image: "/Products/Lumaforce.png",
+    image: "/Products/lumaforce.png",
     description: "Antimalarial tablet pack.",
     category: "Antimalaria",
   },
   {
     name: "Ibuprofen",
     price: "₦1,200",
-    image: "/Products/Ibuprofen.png",
+    image: "/Products/ibuprofen.png",
     description: "Pain relief syrup for fever and headaches.",
     category: "Pain Management",
   },
   {
     name: "Veelam 100ml",
     price: "₦1,300",
-    image: "/Products/Veelam.png",
+    image: "/Products/veelam.png",
     description: "Cold and flu syrup.",
     category: "Cold & Flu",
   },
   {
     name: "Cakafen",
     price: "₦1,100",
-    image: "/Products/Cakafen.png",
+    image: "/Products/cakafen.png",
     description: "relief of throat and chest cough.",
     category: "cough relief",
   },
   {
     name: "Cosine",
     price: "₦1,100",
-    image: "/Products/Cosine.png",
+    image: "/Products/cosine.png",
     description: "relief of cold, cartarr and cough.",
     category: "cough relief",
   },
   {
     name: "Nalolyn",
     price: "₦1,300",
-    image: "/Products/Nalolyn.png",
+    image: "/Products/nalolyn.png",
     description: "relief of cold, cartarr and cough.",
     category: "cold and cough relief",
   },
   {
     name: "Nalotrim",
     price: "₦1,100",
-    image: "/Products/Nalotrim.png",
+    image: "/Products/nalotrim.png",
     description: "relief of cold, cartarr and cough.",
     category: "cold and cough relief",
   },
   {
     name: "Nalovite",
     price: "₦2,400",
-    image: "/Products/Nalovite Tonic.png",
+    image: "/Products/nalovite tonic.png",
     description: "Iron + B complex Tonic.",
     category: "Imunity complex Tonic",
   },
   {
     name: "Prytune Expectorant",
     price: "₦1,100",
-    image: "/Products/Prytune expectorant.png",
+    image: "/Products/prytune expectorant.png",
     description: "Expectorant for chest congestion.",
     category: "Cough,and flu",
   },
   {
     name: "Prytune Syrup",
     price: "₦1,100",
-    image: "/Products/Prytune Syrup.png",
+    image: "/Products/prytune Syrup.png",
     description: "Syrup for cold and flu symptoms.",
     category: "Cold, cough & Flu",
   },
   {
     name: "Salbutamol",
     price: "₦1,200",
-    image: "/Products/Salbutamol.png",
+    image: "/Products/salbutamol.png",
     category: "Respiratory",
   },
   {
     name: "Skinserve",
     price: "₦1,800",
-    image: "/Products/Skinserv.png",
+    image: "/Products/skinserv.png",
     description: "methylated spirit for skin disinfection.",
     category: "methylated spirit",
   },
   {
-    name: "Vitamin B Complex",
+    name: "Vitamin-B-Complex",
     price: "₦1,500",
-    image: "/Products/Vitamin B Complex.png",
+    image: "/Products/vitamin-B-Complex.png",
     description: "B-complex vitamins for energy and immune support.",
     category: "Vitamins & Immunity",
   }
@@ -149,14 +149,14 @@ export default function ProductsPage() {
           <div
             role="status"
             aria-live="polite"
-            image: "/products/Nalis-Paracetamol.png",
+            className="inline-flex items-center gap-3 rounded-lg bg-emerald-100 px-4 py-3 text-emerald-800"
           >
             <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-emerald-400 text-slate-900">
               ✓
             </span>
             <span>{toast}</span>
           </div>
-            image: "/products/Nalis-Vitamin-C.png",
+        ) : null}
 
         <header className="mb-10 flex flex-col gap-6 rounded-[32px] border border-emerald-200 bg-white px-8 py-8 shadow-xl shadow-emerald-200/50 sm:flex-row sm:items-center sm:justify-between">
           <div>
