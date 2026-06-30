@@ -200,7 +200,7 @@ export default function ProductsPage() {
                     <article key={product.name} className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
                       <div className="relative h-64 overflow-hidden rounded-t-[28px] bg-emerald-50">
                         <Image
-                          src={product.image}
+                          src={encodeURI(product.image)}
                           alt={product.name}
                           fill
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
