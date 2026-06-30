@@ -198,12 +198,12 @@ export default function ProductsPage() {
                   {categoryProducts.map((product) => (
                     <article key={product.name} className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
                       <div className="relative h-64 overflow-hidden rounded-t-[28px] bg-emerald-50">
-                        <div className="absolute inset-0 bg-gradient-to-b from-emerald-100 via-emerald-50 to-white" />
+                        <div className="absolute inset-0 z-0 bg-gradient-to-b from-emerald-100 via-emerald-50 to-white" />
                         <img
                           src={product.image}
                           alt={product.name}
                           loading="lazy"
-                          className="h-full w-full object-contain"
+                          className="relative z-10 h-full w-full object-contain"
                         />
                       </div>
                       <div className="space-y-4 p-6">
