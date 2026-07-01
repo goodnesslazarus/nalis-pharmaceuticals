@@ -1,10 +1,13 @@
 "use client";
 
+import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "../../../lib/useCart";
 
 export default function CartPage() {
   const { cart, removeItem, updateQuantity, clearCart, itemCount, total } = useCart();
+  const [imageErrors, setImageErrors] = useState({});
 
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
@@ -50,7 +53,21 @@ export default function CartPage() {
                     <div key={item.name} className="rounded-[28px] border border-slate-200 p-6">
                       <div className="grid gap-6 lg:grid-cols-[200px_1fr] lg:items-center">
                         <div className="overflow-hidden rounded-[24px] bg-slate-100 p-4">
-                          <img src={item.image} alt={item.name} className="h-40 w-full object-contain" />
+                          {imageErrors[item.name] ? (
+                            <div className="flex h-40 w-full items-center justify-center rounded-[18px] bg-slate-200 px-3 text-center text-sm font-semibold text-slate-700">
+                              {item.name}
+                            </div>
+                          ) : (
+                            <Image
+                              src={item.image}
+                              alt={item.name}
+                              width={200}
+                              height={160}
+                              className="h-40 w-full object-contain"
+                              unoptimized
+                              onError={() => setImageErrors((prev) => ({ ...prev, [item.name]: true }))}
+                            />
+                          )}
                         </div>
                         <div className="space-y-4">
                           <div className="flex items-start justify-between gap-4">

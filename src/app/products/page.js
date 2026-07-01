@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "../../lib/useCart";
 
@@ -134,6 +135,7 @@ const categories = [
 export default function ProductsPage() {
   const { addItem, itemCount } = useCart();
   const [toast, setToast] = useState("");
+  const [imageErrors, setImageErrors] = useState({});
 
   const handleAdd = (product) => {
     addItem(product);
@@ -199,13 +201,22 @@ export default function ProductsPage() {
                     <article key={product.name} className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
                       <div className="relative h-64 overflow-hidden rounded-t-[28px] bg-emerald-50">
                         <div className="absolute inset-0 z-0 bg-gradient-to-b from-emerald-100 via-emerald-50 to-white" />
-                        <img
-                          src={product.image}
-                          alt={product.name}
-                          loading="eager"
-                          decoding="async"
-                          className="relative z-10 h-full w-full object-contain block"
-                        />
+                        {imageErrors[product.name] ? (
+                          <div className="relative z-10 flex h-full w-full items-center justify-center px-6 text-center text-sm font-semibold text-emerald-900">
+                            {product.name}
+                          </div>
+                        ) : (
+                          <Image
+                            src={product.image}
+                            alt={product.name}
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            className="relative z-10 h-full w-full object-contain"
+                            unoptimized
+                            priority={false}
+                            onError={() => setImageErrors((prev) => ({ ...prev, [product.name]: true }))}
+                          />
+                        )}
                       </div>
                       <div className="space-y-4 p-6">
                         <div>
