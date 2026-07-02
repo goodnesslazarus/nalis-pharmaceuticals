@@ -209,8 +209,8 @@ export default function ProductsPage() {
                           <Image
                             src={product.image}
                             alt={product.name}
-                            fill
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            width={300}
+                            height={250}
                             className="relative z-10 h-full w-full object-contain"
                             unoptimized
                             priority={false}
