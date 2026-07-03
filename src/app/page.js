@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "../lib/useCart";
+import { products } from "../lib/products";
 
 export default function Home() {
   const { itemCount } = useCart();
@@ -184,26 +186,29 @@ export default function Home() {
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {[
-              { title: 'Nalis Paracetamol', subtitle: 'Pain relief', price: '₦1,200', accent: 'bg-gradient-to-br from-emerald-900 to-emerald-600' },
-              { title: 'Skinserve', subtitle: 'methylated spirit', price: '₦1,800', accent: 'bg-gradient-to-br from-emerald-900 to-emerald-600' },
-              { title: 'Nalistide', subtitle: 'relief of stomach gas', price: '₦2,000', accent: 'bg-gradient-to-br from-emerald-900 to-emerald-600' },
-              { title: 'Nalovite', subtitle: 'Iron boost', price: '₦2,400', accent: 'bg-gradient-to-br from-emerald-900 to-emerald-600' },
-              { title: 'Lumaforce', subtitle: 'antimalaria', price: '₦1,500', accent: 'bg-gradient-to-br from-emerald-900 to-emerald-600' },
-              { title: 'Ibuprofen', subtitle: 'pain and fever relief', price: '₦1,200', accent: 'bg-gradient-to-br from-emerald-900 to-emerald-600' },
-              { title: 'Nalis vitamin C', subtitle: 'vitamin C syrup', price: '₦1,100', accent: 'bg-gradient-to-br from-emerald-900 to-emerald-600' },
-              { title: 'Salbutamol', subtitle: 'Asthma relief', price: '₦1,200', accent: 'bg-gradient-to-br from-emerald-900 to-emerald-600' },
-            ].map((item) => (
-              <div key={item.title} className="rounded-[32px] border border-slate-200 bg-slate-50 p-6 shadow-lg shadow-slate-200/40">
-                <div className={`mb-4 h-40 rounded-[28px] p-6 text-white ${item.accent}`}>
-                  <div className="text-xl font-semibold">{item.title}</div>
-                  <p className="mt-3 text-sm opacity-90">{item.subtitle}</p>
+            {products.slice(0, 8).map((product) => (
+              <div key={product.name} className="rounded-[32px] border border-slate-200 bg-slate-50 p-6 shadow-lg shadow-slate-200/40">
+                <div className="mb-4 overflow-hidden rounded-[28px] bg-white p-4">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    width={320}
+                    height={160}
+                    className="h-40 w-full object-contain"
+                    unoptimized
+                  />
                 </div>
-                <div className="flex items-center justify-between gap-4">
-                  <p className="text-2xl font-semibold text-slate-950">{item.price}</p>
-                  <Link href="/products" className="inline-flex items-center justify-center rounded-full bg-emerald-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-800">
-                    View Products
-                  </Link>
+                <div className="space-y-3">
+                  <div>
+                    <div className="text-xl font-semibold text-slate-950">{product.name}</div>
+                    <p className="mt-2 text-sm text-slate-600">{product.description}</p>
+                  </div>
+                  <div className="flex items-center justify-between gap-4">
+                    <p className="text-2xl font-semibold text-slate-950">{product.price}</p>
+                    <Link href="/products" className="inline-flex items-center justify-center rounded-full bg-emerald-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-800">
+                      View Products
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}

@@ -9,6 +9,14 @@ export default function CartPage() {
   const { cart, removeItem, updateQuantity, clearCart, itemCount, total } = useCart();
   const [imageErrors, setImageErrors] = useState({});
 
+  const whatsappText = cart.length > 0
+    ? `Hello, I would like to place a bulk order for the following items:%0A${cart
+        .map((item) => `${item.quantity}x ${item.name}`)
+        .join('%0A')}%0ATotal: ₦${total.toLocaleString()}%0APlease send me a quote and delivery details.`
+    : 'Hello, I would like to place a bulk order. Please send me a quote and delivery details.';
+
+  const whatsappHref = `https://wa.me/2348147180296?text=${whatsappText}`;
+
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
       <div className="mx-auto max-w-6xl px-6 py-10">
@@ -143,7 +151,7 @@ export default function CartPage() {
               <p className="mt-4 text-lg font-semibold text-slate-900">+234 814 718 0296</p>
               <p className="mt-3 text-sm text-slate-600">Available weekdays, 9am–5pm.</p>
               <a
-                href="https://wa.me/2348147180296?text=Hello%2C%20I%20would%20like%20to%20place%20a%20product%20order.%20Please%20send%20me%20a%20quote%20and%20delivery%20details."
+                href={whatsappHref}
                 target="_blank"
                 rel="noreferrer"
                 className="mt-6 inline-flex w-full items-center justify-center rounded-3xl bg-emerald-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-emerald-800"

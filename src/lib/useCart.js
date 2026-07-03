@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { getProductImage } from "./products";
 
 const STORAGE_KEY = "nalis-pharma-cart";
 
@@ -29,7 +30,12 @@ export function useCart() {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    setCart(parseStoredCart());
+    const stored = parseStoredCart();
+    const normalizedCart = stored.map((item) => ({
+      ...item,
+      image: getProductImage(item.name) || item.image,
+    }));
+    setCart(normalizedCart);
   }, []);
 
   useEffect(() => {
