@@ -16,7 +16,7 @@ export const products = [
   {
     name: "Nalistide 200ml",
     price: "₦2,000",
-    image: "/products/Nalistide 200ml.png",
+    image: "/products/Nalistide-200ml.png",
     description: "Stomach gas relief.",
     category: "Stomach Care",
   },
@@ -72,21 +72,21 @@ export const products = [
   {
     name: "Nalovite",
     price: "₦2,400",
-    image: "/products/Nalovite Tonic.png",
+    image: "/products/Nalovite-Tonic.png",
     description: "Iron + B complex Tonic.",
     category: "Vitamins & Immunity",
   },
   {
     name: "Prytune-Expectorant",
     price: "₦1,100",
-    image: "/products/Prytune expectorant.png",
+    image: "/products/Prytune-expectorant.png",
     description: "Expectorant for chest congestion.",
     category: "Cough & Congestion",
   },
   {
     name: "Prytune-Syrup",
     price: "₦1,100",
-    image: "/products/Prytune Syrup.png",
+    image: "/products/Prytune-Syrup.png",
     description: "Syrup for cold and flu symptoms.",
     category: "Cold & Flu",
   },

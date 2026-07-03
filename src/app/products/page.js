@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "../../lib/useCart";
 import { products } from "../../lib/products";
-
 const categories = [
   "All Products",
   "Pain Management",
@@ -94,7 +93,7 @@ export default function ProductsPage() {
                           </div>
                         ) : (
                           <Image
-                            src={product.image}
+                            src={encodeURI(product.image)}
                             alt={product.name}
                             fill
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

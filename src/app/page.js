@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "../lib/useCart";
 import { products } from "../lib/products";
@@ -189,13 +188,11 @@ export default function Home() {
             {products.slice(0, 8).map((product) => (
               <div key={product.name} className="rounded-[32px] border border-slate-200 bg-slate-50 p-6 shadow-lg shadow-slate-200/40">
                 <div className="mb-4 overflow-hidden rounded-[28px] bg-white p-4">
-                  <Image
-                    src={product.image}
+                  <img
+                    src={encodeURI(product.image)}
                     alt={product.name}
-                    width={320}
-                    height={160}
                     className="h-40 w-full object-contain"
-                    unoptimized
+                    loading="lazy"
                   />
                 </div>
                 <div className="space-y-3">
