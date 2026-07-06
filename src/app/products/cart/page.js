@@ -23,9 +23,9 @@ export default function CartPage() {
         <div className="mb-8 flex flex-col gap-4 rounded-[32px] bg-white px-8 py-8 shadow-xl shadow-slate-200 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="text-sm uppercase tracking-[0.24em] text-slate-500">Product Cart</p>
-            <h1 className="mt-3 text-4xl font-semibold text-slate-900">Review your product cart</h1>
+            <h1 className="mt-3 text-4xl font-semibold text-slate-900">Approval-ready order basket</h1>
             <p className="mt-4 max-w-2xl text-slate-600">
-              Your cart is saved in the browser so you can return anytime and continue shopping.
+              Your cart is saved in the browser so buyers can review items, submit their order, and move into a proforma invoice flow with confidence.
             </p>
           </div>
           <Link

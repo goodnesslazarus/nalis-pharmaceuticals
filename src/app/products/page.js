@@ -48,8 +48,8 @@ export default function ProductsPage() {
         <header className="mb-10 flex flex-col gap-6 rounded-[32px] border border-emerald-200 bg-white px-8 py-8 shadow-xl shadow-emerald-200/50 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="text-sm uppercase tracking-[0.24em] text-emerald-600">Products</p>
-            <h1 className="mt-3 text-4xl font-semibold text-slate-900">Nalis Pharmaceuticals Catalog</h1>
-            <p className="mt-4 max-w-2xl text-slate-600">Browse our full pharmaceutical catalog by category and add items to your persistent cart.</p>
+            <h1 className="mt-3 text-4xl font-semibold text-slate-900">B2B-ready pharmaceutical catalog</h1>
+            <p className="mt-4 max-w-2xl text-slate-600">Browse trusted medicines by category, add products to your cart, and continue into an approval-friendly workflow designed for pharmacies, hospitals, and distributors.</p>
           </div>
           <div className="flex flex-wrap items-center gap-4">
             <Link

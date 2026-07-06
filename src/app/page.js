@@ -29,16 +29,16 @@ export default function Home() {
           </div>
         </nav>
 
-        <section id="home" className="mt-10 grid gap-12 lg:grid-cols-[1.3fr_0.9fr] lg:items-center">
+        <section id="home" className="mt-10 grid gap-12 lg:grid-cols-[1.25fr_0.95fr] lg:items-center">
           <div className="rounded-[32px] bg-gradient-to-br from-emerald-950 via-emerald-900 to-emerald-800 p-10 text-white shadow-2xl shadow-emerald-950/20">
             <span className="inline-flex rounded-full bg-white/10 px-4 py-2 text-sm font-semibold uppercase tracking-[0.3em] text-emerald-200">
-              Pharmaceutical distribution
+              Modern B2B pharmacy ordering
             </span>
             <h1 className="mt-8 text-5xl font-bold leading-tight sm:text-6xl">
-              Pharmaceutical Solutions for Every Stage of Life
+              Easy product browsing, professional checkout, and invoice-ready ordering for healthcare buyers.
             </h1>
             <p className="mt-6 max-w-2xl text-base leading-8 text-emerald-100/90 sm:text-lg">
-              Nalis Pharmaceuticals supplies hospitals, clinics, and pharmacies with bulk medicines and trusted healthcare essentials. Browse our catalog or place your bulk order directly via WhatsApp.
+              Nalis Pharmaceuticals combines the simplicity of a modern online store with the control of a B2B portal for hospitals, pharmacies, and distributors. Customers browse trusted products, add them to cart, and submit orders that generate a proforma invoice for approval and payment.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
@@ -55,7 +55,7 @@ export default function Home() {
               </Link>
             </div>
             <div className="mt-12 flex flex-wrap gap-3">
-              {['All products', 'Antibiotics', 'Pain Management', 'Vitamins & Supplements', 'Chronic Care', 'Clinical Equipment'].map((label, index) => (
+              {['Fast browsing', 'Bulk-ready checkout', 'Proforma invoice', 'Approval workflow', 'Reliable delivery'].map((label, index) => (
                 <span
                   key={label}
                   className={`rounded-full px-4 py-2 text-sm font-semibold ${index === 0 ? 'bg-white text-emerald-950' : 'bg-white/10 text-emerald-100'}`}
@@ -71,16 +71,16 @@ export default function Home() {
             <div className="absolute left-[-4rem] top-20 h-56 w-56 rounded-full bg-emerald-200 opacity-30 blur-3xl" />
             <div className="relative space-y-6">
               <div className="rounded-[28px] border border-emerald-100 bg-emerald-50 p-6 shadow-sm">
-                <p className="text-sm uppercase tracking-[0.3em] text-emerald-800">Popular category</p>
-                <h2 className="mt-4 text-3xl font-semibold text-emerald-950">Carefully sourced medicines</h2>
+                <p className="text-sm uppercase tracking-[0.3em] text-emerald-800">Built for healthcare buyers</p>
+                <h2 className="mt-4 text-3xl font-semibold text-emerald-950">Simple ordering with B2B control</h2>
                 <p className="mt-4 text-slate-700">
-                  Quality products for pharmacies, clinics, and healthcare providers with fast, reliable delivery.
+                  Perfect for pharmacies, clinics, distributors, and hospital procurement teams that need a dependable ordering experience.
                 </p>
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 {[
-                  { label: 'Fast Delivery', value: 'Available nationwide' },
-                  { label: 'Bulk Orders', value: 'Competitive pricing' },
+                  { label: 'What buyers get', value: 'A seamless cart and checkout experience' },
+                  { label: 'What teams get', value: 'Invoice-ready approvals and payment flow' },
                 ].map((item) => (
                   <div key={item.label} className="rounded-[28px] border border-emerald-100 bg-white p-6 shadow-sm">
                     <p className="text-sm uppercase tracking-[0.3em] text-emerald-700">{item.label}</p>
@@ -90,6 +90,19 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </section>
+
+        <section className="mt-10 grid gap-6 rounded-[32px] border border-emerald-100 bg-white/80 p-8 shadow-xl shadow-emerald-100/50 lg:grid-cols-3">
+          {[
+            { title: 'Easy product browsing', text: 'Customers can quickly explore products by category and add them to cart without friction.' },
+            { title: 'Modern online pharmacy', text: 'The experience feels polished, clinical, and easy to trust for recurring procurement needs.' },
+            { title: 'B2B ordering portal', text: 'Hospitals, pharmacies, and distributors can follow a guided workflow toward approval and payment.' },
+          ].map((item) => (
+            <div key={item.title} className="rounded-[24px] border border-slate-200 bg-slate-50 p-6">
+              <h3 className="text-xl font-semibold text-slate-950">{item.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-slate-600">{item.text}</p>
+            </div>
+          ))}
         </section>
         <section className="mt-10 grid gap-6 lg:grid-cols-2">
             <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/50">
@@ -117,12 +130,12 @@ export default function Home() {
 
             <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/50">
               <p className="text-sm uppercase tracking-[0.3em] text-emerald-900">Cart readiness</p>
-              <div className="mt-6 text-2xl font-semibold text-slate-950">Access your cart anytime</div>
+              <div className="mt-6 text-2xl font-semibold text-slate-950">Your order moves from cart to proforma invoice</div>
               <p className="mt-4 text-slate-600">
-                The Products page stores your selection and keeps your cart ready across sessions so customers can review and checkout at their pace.
+                The products page stores your selection, supports fast reordering, and prepares each request for a professional invoice and payment approval path.
               </p>
               <Link href="/products/cart" className="mt-8 inline-flex items-center rounded-full bg-emerald-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-800">
-                View Cart
+                Review Cart
               </Link>
             </div>
           </section>

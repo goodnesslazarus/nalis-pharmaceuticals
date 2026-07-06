@@ -125,6 +125,7 @@ export default function CheckoutPage() {
 
   const stepLabel = useMemo(() => workflowSteps[activeStep], [activeStep]);
   const completedCount = activeStep;
+  const invoiceNumber = useMemo(() => `PF-${Date.now().toString().slice(-6)}`, []);
 
   const handleFieldChange = (event) => {
     const { name, value } = event.target;
@@ -330,8 +331,31 @@ export default function CheckoutPage() {
               {activeStep === 8 && (
                 <div className="space-y-4">
                   <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Proforma Invoice</p>
-                  <h3 className="text-2xl font-semibold text-slate-950">A quotation is prepared for the customer.</h3>
-                  <p className="text-slate-600">The proforma invoice captures the product list, total value, and payment instructions.</p>
+                  <h3 className="text-2xl font-semibold text-slate-950">A professional quotation is generated for approval.</h3>
+                  <p className="text-slate-600">The proforma invoice captures the product list, total value, and payment instructions so the buyer can approve and pay with confidence.</p>
+                  <div className="rounded-[24px] border border-emerald-200 bg-emerald-50 p-5 text-sm text-emerald-900">
+                    <div className="flex items-center justify-between gap-4">
+                      <div>
+                        <p className="font-semibold">Invoice reference</p>
+                        <p className="mt-1">{invoiceNumber}</p>
+                      </div>
+                      <div className="rounded-full bg-white px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700">
+                        Awaiting approval
+                      </div>
+                    </div>
+                    <div className="mt-4 grid gap-3 md:grid-cols-2">
+                      <div className="rounded-2xl bg-white p-4">
+                        <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Customer</p>
+                        <p className="mt-2 font-semibold text-slate-900">{formData.customerName || "Pending customer details"}</p>
+                        <p className="mt-1 text-slate-600">{formData.company || "Retail/Institution"}</p>
+                      </div>
+                      <div className="rounded-2xl bg-white p-4">
+                        <p className="text-xs uppercase tracking-[0.2em] text-slate-500">Order value</p>
+                        <p className="mt-2 font-semibold text-slate-900">₦{total.toLocaleString()}</p>
+                        <p className="mt-1 text-slate-600">{cart.length} item{cart.length === 1 ? "" : "s"}</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               )}
 
