@@ -41,14 +41,12 @@ export default function Home() {
               Nalis Pharmaceuticals supplies hospitals, clinics, and pharmacies with bulk medicines and trusted healthcare essentials. Browse our catalog or place your bulk order directly via WhatsApp.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="https://wa.me/2348147180296"
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                href="/products/checkout"
                 className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-base font-semibold text-emerald-950 shadow-lg shadow-emerald-950/10 transition hover:bg-slate-100"
               >
-                Order Bulk via WhatsApp
-              </a>
+                Start Order Workflow
+              </Link>
               <Link
                 href="/products"
                 className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/5 px-8 py-4 text-base font-semibold text-white transition hover:bg-white/10"

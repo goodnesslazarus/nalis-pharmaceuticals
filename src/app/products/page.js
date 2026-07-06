@@ -59,6 +59,12 @@ export default function ProductsPage() {
               View Cart ({itemCount})
             </Link>
             <Link
+              href="/products/checkout"
+              className="inline-flex items-center justify-center rounded-3xl border border-emerald-300 bg-emerald-50 px-6 py-3 text-sm font-semibold text-emerald-900 transition hover:bg-emerald-100"
+            >
+              Start Workflow
+            </Link>
+            <Link
               href="/"
               className="inline-flex items-center justify-center rounded-3xl border border-slate-200 bg-slate-50 px-6 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
             >

@@ -120,9 +120,12 @@ export default function CartPage() {
                       <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">Total</p>
                       <p className="mt-2 text-3xl font-semibold text-slate-900">₦{total.toLocaleString()}</p>
                     </div>
-                    <button className="inline-flex items-center justify-center rounded-3xl bg-blue-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-800">
+                    <Link
+                      href="/products/checkout"
+                      className="inline-flex items-center justify-center rounded-3xl bg-blue-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-800"
+                    >
                       Proceed to Checkout
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
