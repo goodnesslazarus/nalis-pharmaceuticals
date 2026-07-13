@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { useCart } from "../../../lib/useCart";
+import { generateInvoiceHtml } from "../../../lib/invoice";
 
 const workflowSteps = [
   {
@@ -434,6 +435,32 @@ export default function CheckoutPage() {
                 className="rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100"
               >
                 Reset workflow
+              </button>
+
+              <button
+                type="button"
+                onClick={() => {
+                  // Build invoice data and open in new window for printing/saving
+                  const invoiceData = {
+                    invoiceNumber,
+                    date: new Date().toLocaleString(),
+                    customer: formData,
+                    items: cart,
+                    total,
+                  };
+
+                  const html = generateInvoiceHtml(invoiceData);
+                  const newWindow = window.open("", "_blank");
+                  if (newWindow) {
+                    newWindow.document.write(html);
+                    newWindow.document.close();
+                  } else {
+                    alert("Unable to open invoice window — please allow popups.");
+                  }
+                }}
+                className="ml-auto rounded-full bg-white border border-emerald-600 px-5 py-3 text-sm font-semibold text-emerald-700 transition hover:bg-emerald-50"
+              >
+                Generate Invoice
               </button>
             </div>
           </section>
